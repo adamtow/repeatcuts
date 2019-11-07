@@ -1,0 +1,23 @@
+{
+	"en-US": {
+		"alert_run": "Your shortcut will run repeatedly. If you never leave the Shortcuts app nor experience an error during execution, the shortcut will run until you stop Shortcuts.",
+		"error_shortcut_404": "Shortcut could not be found.",
+		"error_shortcut_none": "No shortcut was chosen.",
+		"label_brightness_currentValue": "Current Value",
+		"label_volume_currentValue": "Current Value",
+		"menu_language": "Change Language…",
+		"menu_run": "Run…",
+		"menu_shortcut": "Shortcut…",
+		"menu_input": "Shortcut Input…",
+		"menu_interval": "Run Interval…",
+		"menu_brightness": "Brightness…",
+		"menu_volume": "Volume…",
+		"menu_whitePoint": "White Point",
+		"menu_guidedAccess": "Guided Access",
+		"menu_about": "About Run Shortcut Forever…",
+		"menu_help": "Help…",
+		"menu_quit": "Quit",
+		"prompt_language": "Choose Language:",
+		"prompt_shortcut": "Select a shortcut to run repeatedly:"
+	}
+}
