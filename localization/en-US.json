@@ -6,6 +6,8 @@
 		"alert_buy_failure": "The license key you entered could not be validated.\n\nPlease make sure you have entered it correctly and try again.",
 		"alert_copied_UUID": "The unique identifier of this RepeatCut has been copied to your clipboard.\n\nYou can run this RepeatCut from another shortcut using the Run Shortcut action with RepeatCuts and the following dictionary as input:",
 		"alert_run": "Your shortcut will run repeatedly according to the settings below.\n\nTo prevent iOS from prematurely stopping the RepeatCut, keep the Shortcuts app as the frontmost application.",
+		"alert_scriptable_instructions": "RepeatCuts Watcher will let you know when RepeatCuts has terminated its loop prematurely. \n\nTo complete installation of the RepeatCuts Watcher, follow these steps:\n\n1. Create a new script in Scriptable called `RepeatCuts Watcher` and paste in the contents of the clipboard.",
+		"alert_scriptable_instructions_title": "RepeatCuts Watcher Installation",
 		"alert_update_none": "You are running the latest version of RepeatCuts.",
 		"error_shortcut_404": "Shortcut could not be found.",
 		"error_shortcut_none": "No shortcut was chosen.",
