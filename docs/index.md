@@ -1,18 +1,21 @@
 # RepeatCuts
 
-RepeatCuts runs selected shortcuts in a continuous loop with options to:
+RepeatCuts creates while loops and runs selected shortcuts continuously with options to:
 
 - Control how many times to repeat. 
-- Delay by seconds, minutes, or hours between runs. 
+- Delay by seconds, minutes, or hours between each loop iteration. 
 - Minimize battery drain by automatically lowering device brightness, media volume, and white point settings.
-- Save frequently used apps that you want to run repeatedly in the RepeatCut Library. 
-- Create While loops in third-party shortcuts.
+- Save frequently used apps that you want to run repeatedly in the RepeatCuts Library. 
+- Create [While loops](https://en.wikipedia.org/wiki/While_loop) in third-party shortcuts.
 
-RepeatCuts Pro features can be unlocked for a small one-time purchase include the ability to:
+The following RepeatCuts Pro features can be unlocked for a small one-time purchase with Apple Pay:
 
 - Prevent accidental termination using Guided Access. 
+- Prevent screen burn-in and image retention with Light/Dark mode toggling.
 - Notifications when the repeating shortcuts stop prematurely. 
 - Custom callback shortcuts after each repeat iteration.
+
+You can trial these Pro features for seven days before deciding to purchase.
 
 ****
 
@@ -20,21 +23,29 @@ RepeatCuts Pro features can be unlocked for a small one-time purchase include th
 
 - [**Download RepeatCuts from RoutineHub.co &raquo;**](https://routinehub.co/shortcut/3760)
 
-Verify that you are running a genuine version of RepeatCuts by comparing its SHA-256 checksum: 
+**Version 1.0.0 SHA-256 Checksum**
+
+Verify that you are running a genuine version of RepeatCuts by comparing its SHA-256 checksum: ****
+
+Use [Shortcut Checksum](https://adamtow.github.io/shortcut-checksum) to verify checksums of shortcuts.
 
 ****
 
 ## Use Cases
 
+### While Loops
+While Shortcuts offers Repeat WIth Each and Repeat N Times actions, it does not offer the ability to create [While loops](https://en.wikipedia.org/wiki/While_loop). Developers can roll their own solutions using the Run Shortcut and custom shortcuts. RepeatCuts provides a standardized format with which to create While loops in shortcuts.
+
+### Foreground Continous Triggering
 Many of the personal automation triggers in iOS 13, such as time and location, require the user to tap on a button in order to run a shortcut. 
 
 I developed [Autocuts](https://adamtow.github.io/autocuts-admin) to work around this limitation. Autocuts runs your shortcuts in the background as long as you are actively using your device. 
 
-For those instances when you are either not using or do not have ready access to your device, RepeatCuts is a alternative solution:
+RepeatCuts can be used in those times when you are either (1) not actively using your device or (2) do not have ready access to your device but still want triggers to occur automatically.
 
-- Driving and want shortcuts to run automatically as you enter and leave locations.
-- Charging your phone and want to receive a notification or run a shortcut when it reaches a certain battery level. 
-- Going for a run and want to run shortcuts automatically while you reach certain landmarks. 
+- You are riding a motorcycle and want to send messages to the people you are meeting when you get close to your destination.
+- You are going for a run and want to have shortcuts run automatically as you reach certain points in your run.
+- You set your phone to charge and you want to be notified when the battery level reaches 80%.
 - Going to sleep for the night but want your device to keep working while you sleep. 
 
 ****
@@ -44,6 +55,7 @@ For those instances when you are either not using or do not have ready access to
 For a small one-time purchase, you can unlock several Pro features of RepeatCuts that make running your looped shortcuts even better:
 
 - **Guided Access**: automatically turn on Guided Access Mode when you repeat a shortcut. This is useful when you want your iOS device to run uninterrupted for extended periods of time. 
+- **Prevent Burn-In**: Periodically switches between Light and Dark Appearance during loops to prevent screen burn-in and image retention.
 - **Custom Callback Shortcuts**: After each loop iteration, you can call a second shortcut which can determine whether to stop or continue repeating.
 - **Notify When Running Stops**: Get notifies when RepeatCuts stops running your shortcuts on repeat prematurely. This feature also requires the use of [Scriptable](https://scriptable.app). 
 
