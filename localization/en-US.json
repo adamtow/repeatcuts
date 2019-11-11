@@ -136,7 +136,6 @@
 		"prompt_share": "Share This {{REPEATCUT}}",
 		"prompt_shortcut": "Select a shortcut to run repeatedly:",
 		"prompt_shortcuts": "Select shortcuts to run repeatedly:",
-		"prompt_shortcuts": "Select shortcuts to run repeatedly:",
 		"prompt_shortcut_order": "Set the order by which the shortcuts will run:",
 		"prompt_shortcut_multiple": "Multiple shortcuts are defined.",
 		"prompt_update": "{{APPNAME}} version {{version}} is available. Would you like to download it now?\n\nRelease Notes\n\n{{notes}}",
