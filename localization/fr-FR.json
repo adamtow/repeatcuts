@@ -11,7 +11,7 @@
 	"alert_buy_trialExpired_title": "L'{{APPNAME}} Procès expiré",
 	"alert_buy_trial_title": "L'{{APPNAME}} Procès",
 	"alert_copied_UUID": "L'identifiant unique de ce {{REPEATCUT}} a été copié sur votre presse-papiers.\n\nVous pouvez exécuter ce {{REPEATCUT}} à partir d'un autre raccourci à l'aide de l'action Run Shortcut avec {{APPNAME}} et le dictionnaire suivant comme entrée:",
-	"alert_run": "Votre raccourci s'exécutera à plusieurs reprises selon les paramètres ci-dessous.\n\nPour éviter qu'iOS n'arrête prématurément le {{REPEATCUT}}, gardez l'application Shortcuts comme application la plus frontale.",
+	"alert_run": "Les raccourcis s'exécutent à plusieurs reprises selon les paramètres ci-dessous. Pour éviter qu'iOS ne s'arrête prématurément à l'application {{APPNAME}}, gardez l'application Shortcuts comme application la plus frontale.",
 	"alert_scriptable_instructions_title": "{{REPEATCUTS_WATCHER}}",
 	"alert_scriptable_watcher": "Le {{REPEATCUTS_WATCHER}}vous fera savoir quand {{APPNAME}} est sorti prématurément.\n\nInstallation complète en créant un nouveau script en {{SCRIPTABLE}} appelé {{REPEATCUTS_WATCHER}} et en en passant dans le contenu du presse-papiers.",
 	"alert_update_none": "Vous exécutez la dernière version de {{APPNAME}}.",
