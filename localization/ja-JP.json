@@ -48,7 +48,7 @@
 	"menu_buy": "プロの機能のロックを解除...",
 	"menu_buy_confirm": "アップルペイで購入...",
 	"menu_buy_confirmPayPal": "ペイパルで購入...",
-	"menu_buy_description": "{{日}} 試用期間の残り日数",
+	"menu_buy_description": "{{DAYS}} 試用期間の残り日数",
 	"menu_buy_description_expired": "試用版の有効期限が切れています",
 	"menu_buy_later": "後で購入",
 	"menu_buy_license": "ライセンス キーの入力...",

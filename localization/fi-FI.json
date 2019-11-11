@@ -11,7 +11,7 @@
 	"alert_buy_trialExpired_title": "{{APPNAME}} Kokeilu versio päättynyt",
 	"alert_buy_trial_title": "{{APPNAME}} Kokeiluversio",
 	"alert_copied_UUID": "Tämän {{REPEATCUT}}-kohteen yksilöllinen tunnus on kopioitu leike pöydälle.\n\nVoit suorittaa tämän {{REPEATCUT}}-sovelluksen toisesta pikakuvakkeella käyttämällä Suorita pikakuvake-toimintoa, jossa on {{APPNAME}} ja seuraava sanasto syötteenä:",
-	"alert_run": "Pikakuvake toimii toistuvasti alla olevien asetusten mukaisesti.\n\nJotta iOS ei estäisi ennenaikaisesti {{repeatcut}}-sovellusta, pidä pikanäppäimet-appi kuvaa-sovelluksena.",
+	"alert_run": "Pikakuvake toimii toistuvasti alla olevien asetusten mukaisesti.\n\nJotta iOS ei estäisi ennenaikaisesti {{REPEATCUT}}-sovellusta, pidä pikanäppäimet-appi kuvaa-sovelluksena.",
 	"alert_scriptable_instructions_title": "{{REPEATCUTS_WATCHER}}",
 	"alert_scriptable_watcher": "{{REPEATCUTS_WATCHER}} antaa sinulle tietää, milloin {{APPNAME}} on poistunut ennenaikaisesti.\n\nViimeistele asennus luomalla uusi komento sarja {{SCRIPTABLE}}-ohjelmassa nimeltä {{REPEATCUTS_WATCHER}} ja liittämällä se leike pöydän sisältöön.",
 	"alert_update_none": "Käytössäsi on {{APPNAME}}-sovelluksen uusin versio.",
