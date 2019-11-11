@@ -1,7 +1,7 @@
 {
 	"en-US": {
 		"alert_about": "Create while loops in your shortcuts and run selected shortcuts in a continuous loop with options to minimize battery life and prevent early termination using Guided Access.",
-		"alert_buy_license": "In the next two screens, enter the email address that you provided during purchase and the license key sent to you.\n\nIf verified, the Pro features of {{APPNAME}} will be unlocked.",
+		"alert_buy_license": "Enter the email address you provided during payment and the license key that you received.\n\nOnce verified, the Pro features of {{APPNAME}} will be unlocked.",
 		"alert_buy_license_title": "Register {{APPNAME}}",
 		"alert_buy_success": "Thank you for purchasing {{APPNAME}} and for supporting my efforts to create advanced shortcuts!",
 		"alert_buy_success_title": "Pro Features Unlocked!",
@@ -73,6 +73,7 @@
 		"menu_interval_seconds": "Seconds",
 		"menu_language": "Change Language…",
 		"menu_list": "View Library…",
+		"menu_mailing_list": "Join Mailing List…",
 		"menu_name": "Name and Description…",
 		"menu_new": "New…",
 		"menu_notifyScriptable": ";Notify When Not Running",
@@ -109,8 +110,8 @@
 		"prompt_appearanceToggle_set": "Enter the number of seconds to wait before toggling the appearance of the display between Light and Dark.",
 		"prompt_brightness": "Set the screen brightness from 0 to 100 when running {{APPNAME}}.\n\nEnter a number outside of that range to keep the brightness at its current value.",
 		"prompt_buy": "Purchase {{APPNAME}} to unlock Pro features such as Guided Access, Appearance Toggling, Notify with {{SCRIPTABLE}}, and Callback Shortcuts.\n\nIt's quick and easy with Apple Pay or PayPal.\n\nYou will receive a license key to unlock the Pro features.\n\nThanks in advance for your support!",
-		"prompt_buy_email": "Enter the email address you used to purchase {{APPNAME}}:",
-		"prompt_buy_license": "Enter your {{APPNAME}} license key:",		
+		"prompt_buy_email": "Enter purchase email address:",
+		"prompt_buy_license": "Enter license key:",
 		"prompt_callback": "Do you want to use a custom callback shortcut with this shortcut?",
 		"prompt_callback_shortcut": "Select a shortcut to be used as a callback.\n\nIf the shortcut returns ❌❌❌, the loop will terminate.\n\nOtherwise, the callback return value will be used as input in the next call to the shortcut.",
 		"prompt_count": "Enter the number of times to run this shortcut.\n\nEnter 0 to run the shortcut continuously.",
