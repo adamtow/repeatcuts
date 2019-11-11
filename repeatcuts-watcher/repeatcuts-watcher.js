@@ -60,6 +60,8 @@ if ( null == repeatCut ) {
 		60
 	];
 	
+	const kAutoRun = 0;
+	
 	const kShortcutName = "RepeatCuts";
 	const kRepeatCutsName = "RepeatCuts";
 	
@@ -123,10 +125,16 @@ if ( null == repeatCut ) {
 
 			// Create the notification
 			let n = new Notification();
-	
+			let input = { "RepeatCuts": true, "UUID": repeatCut["UUID"] };
+			
 			n.title = kTitle;
 			n.body = kBody.replace("{{Date}}", currDate);
-			n.openURL = "shortcuts://run-shortcut?name=" + shortcutName;
+			
+			if ( kAutoRun == true ) {
+				n.openURL = "shortcuts://run-shortcut?name=" + shortcutName + "&input=" + encodeURI ( JSON.stringify( input ) );
+			} else {
+				n.openURL = "shortcuts://run-shortcut?name=" + shortcutName;
+			}
 			n.sound = kSound;
 			n.setTriggerDate( notifyDate );
 			n.schedule();
