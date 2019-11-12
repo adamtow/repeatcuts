@@ -105,6 +105,7 @@ Here are some shortcuts that work well with RepeatCuts in this fashion.
 - [**Location Triggers**](https://adamtow.github.io/location-triggers): Automatically run shortcuts based on your current location.
 - [**Auto DND**](https://adamtow.github.io/auto-dnd): Automatically turn on Do Not Disturb mode based on your calendar events.
 - [**Auto Low Power Mode**](https://routinehub.co/shortcut/3641): Automatically turn on or off Low Power Mode when your battery level reaches a certain percentage. 
+- [**Send Message at Location**](https://www.icloud.com/shortcuts/b62814d8f8224cc08a1727ecb0264d25): Automatically send a message to select recipients when you reach a certain location.
 
 ****
 
