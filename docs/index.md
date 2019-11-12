@@ -1,6 +1,6 @@
 # RepeatCuts
 
-RepeatCuts creates while loops and supervises selected shortcuts when they are running continuously in the foreground. 
+RepeatCuts creates [while loops](#while) and supervises selected shortcuts when they are [running continuously](#continuous-triggering) in the foreground. 
 
 ![RepeatCuts](https://adamtow.github.io/repeatcuts/images/repeatcuts-hero.png)
 
@@ -16,7 +16,7 @@ The following [RepeatCuts Pro features can be unlocked for a small purchase](#pr
 
 - Chain multiple shortcuts to run in a single RepeatCut.
 - Prevent accidental termination using Guided Access. 
-- Prevent screen burn-in and image retention by periodically toggling Light and Dark modes.
+- Preserve display life by periodically toggling Light and Dark modes.
 - Notifications when the repeating shortcuts stop prematurely (requires Scriptable). 
 - Custom callback shortcuts after each repeat iteration.
 
@@ -35,6 +35,46 @@ Verify with [Shortcut Checksum](https://adamtow.github.io/shortcut-checksum) tha
 
 [See previous version checksums here](#versions).
 
+### Sample RepeatCuts
+Here are some shortcuts that work well with RepeatCuts:
+
+- [**Autocuts**](https://adamtow.github.io/autocuts-admin): Automatically run shortcuts based on time and web-based triggers.
+- [**Location Triggers**](https://adamtow.github.io/location-triggers): Automatically run shortcuts based on your current location.
+- **Factorial**: Calculates factorials.
+- **Enter Valid Email Address**: While loop demonstration of getting user input.
+- **Countdown**: Provide a number and it will speak a countdown to zero.
+- **Gentle Brightness**: Eases in your screen brightness from its current setting to maximum brightness.
+
+****
+
+## Table of Contents
+- [Download](#download)
+- [Use Cases](#use-cases)
+	- [While Loops](#while)
+	- [Foreground Continuous Triggering](#continuous-triggering)
+- [Anatomy of a RepeatCut](#anatomy)
+- [Usage](#usage)
+	- [Creating a New RepeatCut](#new)
+	- [Setting Shortcut Input](#input)
+	- [Adjusting Frequency](#frequency)
+		- [Number of Repetitions](#count)
+		- [Repeat Delay Interval](#repeat-interval)
+	- [View the RepeatCut Library](#library)
+- [Running a Shortcut Repeatedly](#running)
+- [PRO Features](#pro)
+	- [Callback Shortcut](#callback)
+	- [Multiple Shortcuts](#multiple)
+	- [Guided Access](#guided-access)
+	- [Notify When Running Stops](#notify)
+		- [RepeatCuts Watcher Script](#repeatcuts-watcher)
+	- [Appearance Toggle](#appearance-toggle)
+- [Developer](#developer)
+	- [Exiting Out of Loops](#exiting)
+	- [Programmatically Calling RepeatCuts From Other Shortcuts](#api)
+- [Localization](#localization)
+- [Versions](#versions)
+- [License](#license)
+
 ****
 
 <span id="use-cases"></span>
@@ -43,6 +83,8 @@ Verify with [Shortcut Checksum](https://adamtow.github.io/shortcut-checksum) tha
 <span id="while"></span>
 ### While Loops
 While Shortcuts offers Repeat with Each and Repeat actions, it does not natively offer a While action. [While loops](https://en.wikipedia.org/wiki/While_loop) are commonly used in programming as a form of a repeating if-statement. While developers can roll their own solutions using the Run Shortcut and custom shortcuts,  RepeatCuts provides a standardized format with powerful controls for creating these loops in shortcuts.
+
+![Validating an email with a while loop and RepeatCuts](https://adamtow.github.io/repeatcuts/images/valid-email-2.png)
 
 <span id="continuous-triggering"></span>
 ### Foreground Continous Triggering
@@ -56,6 +98,9 @@ RepeatCuts can be used in those times when you are either (1) not actively using
 - You are going for a run and want to log the time you reach certain points along your route.
 - You set your phone down to charge and you want to be notified when the battery level reaches 80%.
 - You are retiring for the evening, but want your device to keep working while you sleep. 
+
+![Location Triggers](https://adamtow.github.io/repeatcuts/images/repeatcuts-hero.png)
+
 
 ****
 
@@ -97,7 +142,7 @@ A RepeatCut has the following fields:
 
 ![RepeatCut Details](https://adamtow.github.io/repeatcuts/images/repeatcut-details.png)
 
-
+<span id="usage"></span>
 ## Usage
 
 Opening up the RepeatCuts app will display the following menu of commands:
@@ -116,6 +161,7 @@ Opening up the RepeatCuts app will display the following menu of commands:
 	- **Check for Updates**: manually check for an update to RepeatCuts. 
 	- **Reset Settings**: delete settings or erase all RepeatCuts content. 
 
+<span id="new"></span>
 ### Creating a New RepeatCut
 
 Tap New from the RepeatCuts Home screen to start creating a new RepeatCut. You will be prompted to enter the following things:
@@ -125,37 +171,57 @@ Tap New from the RepeatCuts Home screen to start creating a new RepeatCut. You w
 - **Delay Interval**: choose to have no delay between runs or enter a delay value in seconds, minutes, or hours.
 - **Name**: enter a descriptive name for your RepeatCut. 
 
+![Creating a new RepeatCut](https://adamtow.github.io/repeatcuts/images/new-1.png)
+
+<span id="input"></span>
+### Setting Shortcut Input
+After creating a RepeatCut, you may want to provide optional input to the shortcut. Tap **Shortcut Input** and enter a textual representation of your input that will be sent when the RepeatCut runs.
+
+![Setting input for a RepeatCut's shortcut](https://adamtow.github.io/repeatcuts/images/new-1.png)
+
+In the example above, we're passing the text `run` to the [Location Triggers](https://adamtow.github.io/location-triggers) shortcut, which will instruct Location Triggers to bypass its Home screen, calculate the user's current position, and automatically run any shortcuts assigned to that location.
+
+Any output from the shortcut will be treated as input in the next iteration of the run loop. This allows you to change the behavior of your shortcut based on the previous run.
+
+<span id="frequency"></span>
+### Adjusting Frequency
+A RepeatCut can be set to run indefinitely or a finite number of times. You can also set a delay between each loop iteration. Here's how to do it:
+
+<span id="count"></span>
+#### Number of Repetitions
+1. Open a RepeatCut.
+2. Tap **Iterations**.
+3. Set 0 if you want to run the RepeatCut forever, or enter a non-negative number for the number of times RepeatCuts will run the shortcut (or shortcuts if the Multiple Shortcuts feature is enabled).
+
+<span id="repeat-interval"></span>
+#### Repeat Delay Interval
+1. Open a RepeatCut.
+2. Tap **Repeat Interval**.
+3. Choose **No Delay** if you want the shortcut or shortcuts to run immediately after running. Or, tap **Seconds**, **Minutes**, or **Hours** and enter a non-negative number to have RepeatCuts wait that long before calling the shortcut again.
+
+> Note: Shortcuts must be running in the foreground in order for the Wait action to work properly. If you switch to another app, iOS will likely terminate the shortcut due to perceived inactivity. If you plan to run RepeatCuts for long periods of time, consider turning on the [Guided Access](#guided-access) feature.
+
+![Adjust a RepeatCut's count and repeat delay interval](https://adamtow.github.io/repeatcuts/images/frequency.png)
+
+<span id="library"></span>
 ### View the RepeatCut Library
 
 Tap View Library to see a list of all the RepeatCuts that you have made. Tapping on a RepeatCut will load and display it on the RepeatCuts Home screen. 
 
 > Note: If you do not have any RepeatCuts installed, the Library command will be hidden. 
 
+![Viewing the RepeatCuts Library](https://adamtow.github.io/repeatcuts/images/library.png)
+
 ****
 
+<span id="running"></span>
 ## Running a Shortcut Repeatedly
 
 Tap Run to run the selected RepeatCut repeatedly. RepeatCuts will run the shortcut or shortcuts in the RepeatCut according to the [RepeatCut settings](#anatomy).
 
 From the Shortcuts Home screen, you can stop a RepeatCut by tapping the square Stop button. If that button is not visible, you can force quit Shortcuts by revealing the app switcher and swiping the Shortcuts away.
 
-### Shortcut Input
-You can optionally add a text input to be sent to the RepeatCut's shortcut. Any output from the shortcut will be treated as input in the next iteration of the run loop. This allows you to change the behavior of your shortcut based on the previous run.
-
-### Adjusting Frequency
-A RepeatCut can be set to run indefinitely or a finite number of times. You can also set a delay between each loop iteration. Here's how to do it:
-
-#### Number of Repetitions
-1. Open a RepeatCut.
-2. Tap **Iterations**.
-3. Set 0 if you want to run the RepeatCut forever, or enter a non-negative number for the number of times RepeatCuts will run the shortcut (or shortcuts if the Multiple Shortcuts feature is enabled).
-
-#### Repeat Delay
-1. Open a RepeatCut.
-2. Tap **Repeat Interval**.
-3. Choose **No Delay** if you want the shortcut or shortcuts to run immediately after running. Or, tap **Seconds**, **Minutes**, or **Hours** and enter a non-negative number to have RepeatCuts wait that long before calling the shortcut again.
-
-> Note: Shortcuts must be running in the foreground in order for the Wait action to work properly. If you switch to another app, iOS will likely terminate the shortcut due to perceived inactivity. If you plan to run RepeatCuts for long periods of time, consider turning on the [Guided Access](#guided-access) feature.
+![RepeatCuts](https://adamtow.github.io/repeatcuts/images/repeatcuts-hero.png)
 
 ****
 
