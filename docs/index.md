@@ -6,7 +6,7 @@ RepeatCuts creates [while loops](#while) and supervises selected shortcuts when 
 
 RepeatCuts has options to:
 
-- Control how many times to repeat, from 1 time to forever. 
+- Control how many times to repeat a shortcut, from 1 time to forever. 
 - Delay each loop iteration by seconds, minutes, or hours. 
 - Minimize battery drain by automatically lowering device brightness, media volume, and white point settings.
 - Save frequently used apps that you want to run repeatedly in the RepeatCuts Library. 
@@ -17,8 +17,8 @@ The following [RepeatCuts Pro features can be unlocked for a small purchase](#pr
 - Chain multiple shortcuts to run in a single RepeatCut.
 - Prevent accidental termination using Guided Access. 
 - Preserve display life by periodically toggling Light and Dark modes.
-- Notifications when the repeating shortcuts stop prematurely (requires Scriptable). 
-- Custom callback shortcuts after each repeat iteration.
+- Display notifications when repeating shortcuts stop prematurely (requires Scriptable). 
+- Run a custom callback shortcut after each repeat iteration.
 
 You can trial these Pro features for seven days before deciding to purchase.
 
@@ -31,19 +31,9 @@ You can trial these Pro features for seven days before deciding to purchase.
 
 **Version 1.0.0 SHA-256 Checksum**: `b4437a3628ffefa0811f6bb65d0151bf6c9a55ef6b24d2017aa04bb41497ec26`
 
-Verify with [Shortcut Checksum](https://adamtow.github.io/shortcut-checksum) that you are running a genuine version of RepeatCuts by comparing its SHA-256 checksum:
+Verify with [Shortcut Checksum](https://adamtow.github.io/shortcut-checksum) that you are running a genuine version of RepeatCuts by comparing its SHA-256 checksum. 
 
 [See previous version checksums here](#versions).
-
-### Sample RepeatCuts
-Here are some shortcuts that work well with RepeatCuts:
-
-- [**Autocuts**](https://adamtow.github.io/autocuts-admin): Automatically run shortcuts based on time and web-based triggers.
-- [**Location Triggers**](https://adamtow.github.io/location-triggers): Automatically run shortcuts based on your current location.
-- **Factorial**: Calculates factorials.
-- **Enter Valid Email Address**: While loop demonstration of getting user input.
-- **Countdown**: Provide a number and it will speak a countdown to zero.
-- **Gentle Brightness**: Eases in your screen brightness from its current setting to maximum brightness.
 
 ****
 
@@ -86,6 +76,14 @@ While Shortcuts offers Repeat with Each and Repeat actions, it does not natively
 
 ![Validating an email with a while loop and RepeatCuts](https://adamtow.github.io/repeatcuts/images/valid-email-2.png)
 
+Here are some sample shortcuts that demonstrate RepeatCuts ability to create while loops:
+
+- [**Factorial**](https://www.icloud.com/shortcuts/1d2c51faf06346a6ae931c06659f47b8): Calculates factorials.
+- [**Adding Numbers**](https://www.icloud.com/shortcuts/a64162d232a0470bba2992cc232f48cd): Add a number to itself until it reaches or surpasses a given number. 
+- [**Valid Email**](https://www.icloud.com/shortcuts/3c0bbaa0883e4d7e8bf825fd6cbdbcbd): While loop demonstration of validating user input.
+- [**Countdown**](https://www.icloud.com/shortcuts/a30b7253b3354315bdb4ad2fd3d73e67): Provide a number and it will speak a countdown to zero.
+- [**Gentle Brightness**](https://www.icloud.com/shortcuts/c3104a458b4d4074ad0eb9e5e0da99c6): Eases in your screen brightness from its current setting to maximum brightness.
+
 <span id="continuous-triggering"></span>
 ### Foreground Continous Triggering
 Many of the personal automation triggers in iOS 13, such as time and location, require the user to tap on a button in order to run a shortcut. 
@@ -101,6 +99,12 @@ RepeatCuts can be used in those times when you are either (1) not actively using
 
 ![Location Triggers](https://adamtow.github.io/repeatcuts/images/repeatcuts-hero.png)
 
+Here are some shortcuts that work well with RepeatCuts in this fashion. 
+
+- [**Autocuts**](https://adamtow.github.io/autocuts-admin): Automatically run shortcuts based on time and web-based triggers.
+- [**Location Triggers**](https://adamtow.github.io/location-triggers): Automatically run shortcuts based on your current location.
+- [**Auto DND**](https://adamtow.github.io/auto-dnd): Automatically turn on Do Not Disturb mode based on your calendar events.
+- [**Auto Low Power Mode**](https://routinehub.co/shortcut/3641): Automatically turn on or off Low Power Mode when your battery level reaches a certain percentage. 
 
 ****
 
@@ -122,11 +126,11 @@ Going Pro is simple and convenient with Apple Cash or PayPal.
 <span id="anatomy"></span>
 ## Anatomy of a RepeatCut 
 
-A RepeatCut has the following fields:
+Each RepeatCut has the following fields:
 
 - **Name**: the name of your RepeatCut. 
 - **Description**: (optional) a short description of your RepeatCut. 
-- **Shortcut**: the shortcut or shortcuts that will be run repeatedly by RepeatCuts. 
+- **Shortcut**: the shortcut (or shortcuts) that will be run repeatedly. 
 - **Shortcut Input**: (optional) text input to be originally sent to your shortcut. Subsequent calls to your shortcut will use the output from the previous shortcut call. 
 - [**Callback Shortcut🔒**](#callback):  the shortcut that will be called after each successful iteration. Input to the callback shortcut will be the output from the call to the repeat shortcut. 
 - [**Count**](#frequency): how many times the shortcut should repeat. If you specify 0 or less, the shortcut will run indefinitely. 
