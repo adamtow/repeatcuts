@@ -29,7 +29,7 @@ You can trial these Pro features for seven days before deciding to purchase.
 
 - [**Download RepeatCuts from RoutineHub.co &raquo;**](https://routinehub.co/shortcut/3760)
 
-**Version 1.0.0 SHA-256 Checksum**: `b4437a3628ffefa0811f6bb65d0151bf6c9a55ef6b24d2017aa04bb41497ec26`
+**Version 1.0.3 SHA-256 Checksum**: `7efe02015a64af35df1c6f19b404049128f46031793f340cbe67f925dcc9bb43`
 
 Verify with [Shortcut Checksum](https://adamtow.github.io/shortcut-checksum) that you are running a genuine version of RepeatCuts by comparing its SHA-256 checksum. 
 
